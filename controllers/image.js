@@ -6,7 +6,7 @@ const app = new Clarifai.App({
 
 const handleApiCall = (req, res) => {
 	app.models
-	.predict(process.env.API_CLARIFAI, req.body.input)
+	.predict(Clarifai.API_CLARIFAI, req.body.input)
 	.then(data => {
 		res.json(data);
 	})
